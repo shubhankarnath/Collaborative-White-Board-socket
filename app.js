@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const dotenv=require('dotenv');
 dotenv.config();
@@ -12,6 +13,13 @@ const port = 10000;
 app.use(express.static(__dirname + "/public"));
 
 var clients = [];
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/public' )));
+
+app.get("*", (req, res) =>{
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+})
 
 const onConnection = socket => {
     socket.on("created", user => {

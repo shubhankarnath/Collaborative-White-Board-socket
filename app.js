@@ -10,6 +10,7 @@
  const io = require("socket.io")(http);
  const port = 10000;
 
+const __dirname = path.resolve();
  
 
 app.use(express.static(__dirname + "/public"));

@@ -1,14 +1,29 @@
-const path = require("path");
-const express = require("express");
-const dotenv=require('dotenv');
+// const path = require("path");
+// const express = require("express");
+// const dotenv=require('dotenv');
+// dotenv.config();
+// const { SocketAddress } = require("net");
+// const { disconnect } = require("process");
+// const { REPL_MODE_SLOPPY } = require("repl");
+// const app = express();
+// const http = require("http").Server(app); // creating server
+// const io = require("socket.io")(http);
+// const port = 10000;
+import express from 'express';
+import dotenv from 'dotenv';
+import path from 'path';
+import { SocketAddress } from 'net';
+import { disconnect } from 'process';
+import { REPL_MODE_SLOPPY } from 'repl';
+import { Server } from 'http';
+import { Server as SocketIOServer } from 'socket.io';
 dotenv.config();
-const { SocketAddress } = require("net");
-const { disconnect } = require("process");
-const { REPL_MODE_SLOPPY } = require("repl");
 const app = express();
-const http = require("http").Server(app); // creating server
-const io = require("socket.io")(http);
+const http = new Server(app);
+//creating server
+const io = new SocketIOServer(http);
 const port = 10000;
+ 
 
 app.use(express.static(__dirname + "/public"));
 

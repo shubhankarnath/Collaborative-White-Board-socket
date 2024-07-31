@@ -1,10 +1,11 @@
 {
   "name": "collaborative-whiteboard",
   "version": "1.0.0",
+  "type": "module",
   "description": "A online collaborative whiteboard in real time",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

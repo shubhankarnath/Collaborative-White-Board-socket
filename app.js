@@ -10,11 +10,8 @@
  const io = require("socket.io")(http);
  const port = 10000;
 
-app.use(express.static(path.join(__dirname, '/public' )));
+app.use(express.static(path.join(__dirname, '/Public' )));
 
-app.get("*", (req, res) =>{
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-})
 
 
 var clients = [];

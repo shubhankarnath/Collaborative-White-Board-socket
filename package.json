@@ -1,7 +1,6 @@
 {
   "name": "collaborative-whiteboard",
-  "version": "1.0.0",
-  "type":"module",
+  "version": "1.0.0", 
   "description": "A online collaborative whiteboard in real time",
   "main": "app.js",
   "scripts": {
